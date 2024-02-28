@@ -3,8 +3,8 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* height: 100%;
-  width: 100%; */
+  height: 100%;
+  width: 100%;
   font-size: 1.2rem;
   min-height: 100vh;
 }
@@ -25,6 +25,10 @@ header {
   align-items: center;
   margin: 0.4em 2em;
   justify-content: space-between;
+}
+
+nav {
+  flex-basis: 72%;
 }
 
 nav ul {
@@ -56,12 +60,15 @@ footer img {
   border: none;
 }
 
-.login-buttonMobile {
-  display: none;
-}
-
 .login-button:hover {
   background-color: #bfa524;
+  cursor: pointer;
+}
+
+.hamburger {
+  color: #f4ce14;
+  font-size: 2rem;
+  font-weight: bolder;
   cursor: pointer;
 }
 
@@ -78,7 +85,7 @@ span {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  background-color: rgb(73, 95, 88);
+  background-color: #065139;
   padding: 1em 4.4em;
   height: fit-content;
 }
@@ -299,7 +306,7 @@ footer {
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 1rem;
-  background-color: #333333;
+  background-color:#000000;
   margin-top: 2rem;
   height: fit-content;
   left: 0;
@@ -313,6 +320,7 @@ footer li {
   cursor: pointer;
   color: #5da88f;
   font-weight: 400;
+  font-size: 0.92em;
 }
 
 footer li:hover {
@@ -344,17 +352,68 @@ footer .socials a {
   padding: 0.2rem;
   height: fit-content;
   cursor: pointer;
-  color: #132f26;
+  color: #021710;
   text-align: center;
   align-items: center;
   font-weight: bolder;
 }
 
-@media screen and (min-width: 769px) and (max-width: 1090px) {
-  nav ul li {
-    font-size: smaller;
+footer .socials a:hover {
+  background-color: #b19e41;
+}
+
+@media screen and (max-width: 1150px) {
+  header {
+    margin: 0.4em 1em;
+    padding: 0.4em 0 1em 0;
   }
 
+  header img {
+    width: 8rem;
+  }
+  nav {
+    display: flex;
+    position: absolute;
+    flex-direction: row-reverse;
+    justify-content: center;
+    top: 0;
+    background-color: hwb(160 29% 63%);
+    /* backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px); */
+    width: 100%;
+    height: 100dvh;
+    padding: 0;
+
+    z-index: 999999;
+  }
+
+  nav ul {
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: center;
+  }
+
+  nav ul li Link {
+    font-size: 1.2rem;
+    color: red;
+    background-color: red;
+  }
+
+  nav .nav__close {
+    position: absolute;
+    right: 6.8%;
+    top: 4%;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .nav__toggle,
+  .nav__close {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1090px) {
   .login-button {
     margin-left: 1rem;
   }
@@ -389,20 +448,6 @@ footer .socials a {
   }
 }
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .login-button {
-    display: none;
-  }
-
-  .login-buttonMobile {
-    display: inline-block;
-  }
-
   .first-section {
     justify-content: space-between;
     padding: 1em 1em;
@@ -451,10 +496,7 @@ footer .socials a {
     padding-bottom: 1.5rem;
     text-align: center;
     height: fit-content;
-   
   }
-
-  
 
   .menu-price {
     justify-content: space-between;

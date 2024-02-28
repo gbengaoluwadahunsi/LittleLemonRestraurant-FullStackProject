@@ -1,6 +1,7 @@
 // import React from 'react'
 // import { useState } from 'react'
 import { Routes, Route, Link } from "react-router-dom";
+import { IoClose, IoMenu } from "react-icons/io5";
 import Home from "./Homepage";
 import About from "./AboutLittleLemon";
 import Menu from "./Menu";
@@ -19,7 +20,11 @@ const App = () => {
         <Link to="/">
           <img src={Image} alt="Little Lemon restaurant Logo" />
         </Link>
+
         <nav>
+           <div>
+            <IoClose className="nav__close hamburger" />
+          </div>
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -36,14 +41,20 @@ const App = () => {
             <li>
               <Link to="/orderonline">Order Online</Link>
             </li>
-            <Link to="/Login"><button className="login-button login-buttonMobile">
-          Login </button></Link>
+
+           <li>
+           <Link to="/Login">
+              <button className="login-button">Login </button>
+            </Link>
+           </li>
           </ul>
+
+         
         </nav>
-        
-          <Link to="/Login"><button className="login-button">
-          Login </button></Link>
-       
+
+        <div>
+          <IoMenu className=" nav__toggle hamburger" />
+        </div>
       </header>
       <Routes>
         <Route path="/" element={<Home />} />
