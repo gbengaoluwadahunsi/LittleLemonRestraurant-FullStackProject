@@ -42,7 +42,7 @@ nav ul {
   color: #ff9900;
 }
 
-nav ul li a:hover {
+nav ul li:hover {
   border-bottom: 3px solid #f4ce14;
 }
 
@@ -203,7 +203,7 @@ span {
 }
 
 .price {
-  color: #ee9972;
+  color: #d3602b;
 }
 
 .delivery {
@@ -304,16 +304,27 @@ span {
 footer {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
   gap: 1rem;
-  background-color:#000000;
+  background-color: #000000;
   margin-top: 2rem;
   height: fit-content;
   left: 0;
   bottom: 0;
-  width: 100%;
-  padding: 10px 1rem;
+  padding: 0.7rem 1rem;
   text-align: center;
+}
+
+footer section {
+  display: flex;
+  flex-basis: 80%;
+  margin: 0 auto;
+}
+
+footer section section {
+  flex-direction: column;
+}
+footer section section div {
+  margin-top: -1rem;
 }
 
 footer li {
@@ -327,22 +338,17 @@ footer li:hover {
   border-bottom: 3px solid #f4ce14;
 }
 
-.g {
-  color: yellow;
-}
-
 footer .logo {
   align-self: center;
-}
-
-footer section {
-  margin: 0 auto;
 }
 
 footer .socials {
   display: flex;
   gap: 0.8rem;
   padding: 0.8rem 0;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 
 footer .socials a {
@@ -362,7 +368,7 @@ footer .socials a:hover {
   background-color: #b19e41;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1000px) {
   header {
     margin: 0.4em 1em;
     padding: 0.4em 0 1em 0;
@@ -372,48 +378,82 @@ footer .socials a:hover {
     width: 8rem;
   }
   nav {
-    display: flex;
     position: absolute;
     flex-direction: row-reverse;
     justify-content: center;
     top: 0;
-    background-color: hwb(160 29% 63%);
-    /* backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px); */
+    background-color: #437e69;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     width: 100%;
-    height: 100dvh;
-    padding: 0;
-
+    padding: 6rem 0;
     z-index: 999999;
+  }
+
+  .display-flex {
+    display: flex;
+  }
+
+  .display-none {
+    display: none;
   }
 
   nav ul {
     flex-direction: column;
-    row-gap: 2rem;
+    column-gap: 0.1rem;
     align-items: center;
+    justify-content: center;
   }
 
-  nav ul li Link {
-    font-size: 1.2rem;
-    color: red;
-    background-color: red;
+  nav ul .navlink {
+    color: white;
+    font-size: smaller;
+  }
+
+  nav ul li:hover {
+    border-bottom: none;
   }
 
   nav .nav__close {
-    position: absolute;
-    right: 6.8%;
+    position: fixed;
+    right: 5%;
     top: 4%;
+    border: 2px solid #253e36;
+    border-radius: 50%;
+    padding: 0.2rem;
+  }
+
+
+  footer {
+    flex-direction: column;
+  }
+
+  footer  section {
+    /* flex-wrap: wrap; */
+    flex-basis: 45%;
+   
   }
 }
 
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 1000px) {
   .nav__toggle,
   .nav__close {
     display: none;
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1090px) {
+@media screen and (min-width: 769px) and (max-width: 1106px) {
+  header {
+    padding: 1.2rem 0.2rem;
+  }
+
+  header nav li {
+    font-size: 90%;
+  }
+
+  header nav {
+    flex-basis: 80%;
+  }
   .login-button {
     margin-left: 1rem;
   }
@@ -439,7 +479,6 @@ footer .socials a:hover {
 
   .card-container {
     flex-wrap: wrap;
-
     gap: 0.1rem; /* Reduce the gap between cards */
     padding: 1rem;
     max-width: fit-content; /* Limit the container width */
@@ -509,6 +548,13 @@ footer .socials a:hover {
     height: fit-content;
     text-align: start;
   }
+  footer  section {
+    flex-wrap: wrap;
+    flex-basis: 45%;
+   
+  }
+
+  
 }
 
 @media (max-width: 480px) {

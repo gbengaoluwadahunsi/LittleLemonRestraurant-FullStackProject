@@ -16,89 +16,106 @@ function Footer() {
           <img src={Image} alt="" />
         </Link>
         <section>
-          <h5 className="">INFORMATION</h5>
-          <div className="">
-            <Link to="/" passHref>
-              <li>Home</li>
-            </Link>
-            <Link href="../blog" passHref>
-              <li>Blog</li>
-            </Link>
-            {/* <li>About us</li> */}
-            <Link href="../products" passHref>
-              <li>Menu</li>
-            </Link>
-            <Link href="../contact">
-              <li>Contact Us</li>
-            </Link>
-          </div>
-        </section>
-
-        <section>
-          <h5 className="">TOP ITEMS</h5>
-          <div className="">
-            <Link>
-              <li>Pepperoni</li>
-            </Link>
-            <Link>
-              <li>Swiss Mushroom</li>
-            </Link>
-            <Link>
-              {" "}
-              <li>Berbeque Chicken</li>
-            </Link>
-            <Link>
-              {" "}
-              <li>Vegetarian</li>
-            </Link>
-            <Link>
-              {" "}
-              <li>Ham & Cheese</li>
-            </Link>
-          </div>
-        </section>
-
-        <section className="">
-          <h5 className="">OTHERS</h5>
-          <div className="">
-            <Link href="../cart" passHref>
-              <li>Checkout</li>
-            </Link>
-            <Link href="../cart" passHref>
-              <li>Cart</li>
-            </Link>
-            <Link href="../products" passHref>
-              <li>Menu</li>
-            </Link>
-            <Link href="#" passHref>
-              <li>Locations</li>
-            </Link>
-            <Link href="/adminLogin" passHref>
-              <button className="booking-button">Admin Login</button>
-            </Link>
-          </div>
-        </section>
-
-        <section>
-          <h5 className="">SOCIAL MEDIA</h5>
-          <div >
-            <div className="socials">
-              <a href="https://www.facebook.com/kaliceagbabiaka1">
-                <FaFacebookF className="" />
-              </a>
-              <a href="https://www.pinterest.com/oluwadahunsioluwakemi">
-                <FaPinterestP className="" />
-              </a>
-              <a href="https://twitter.com/km_oluwadahunsi">
-                <FaTwitter className="" />
-              </a>
-              <a href="https://gbengaoluwadahunsi.vercel.app">
-                <FaInstagram className="" />
-              </a>
+          <section>
+            <h5 className="">INFORMATION</h5>
+            <div className="">
+              <Link to="/">
+                <li>Home</li>
+              </Link>
+              <Link href="../blog">
+                <li>Blog</li>
+              </Link>
+              <Link href="/About">
+                <li>About us</li>{" "}
+              </Link>
+              <Link href="/products">
+                <li>Menu</li>
+              </Link>
+              <Link href="../contact">
+                <li>Contact Us</li>
+              </Link>
             </div>
+          </section>
 
-            <button className="booking-button">Sign Up</button>
-          </div>
+          <section>
+            <h5 className="">TOP ITEMS</h5>
+            <div className="">
+              <Link>
+                <li>Pepperoni</li>
+              </Link>
+              <Link>
+                <li>Swiss Mushroom</li>
+              </Link>
+              <Link>
+                {" "}
+                <li>Berbeque Chicken</li>
+              </Link>
+              <Link>
+                {" "}
+                <li>Vegetarian</li>
+              </Link>
+              <Link>
+                {" "}
+                <li>Ham & Cheese</li>
+              </Link>
+            </div>
+          </section>
+
+          <section id="others">
+            <h5 className="">OTHERS</h5>
+            <div className="">
+              <Link href="../cart">
+                <li>Checkout</li>
+              </Link>
+              <Link href="../cart">
+                <li>Cart</li>
+              </Link>
+              <Link href="../products">
+                <li>Menu</li>
+              </Link>
+              <Link href="#">
+                <li>Locations</li>
+              </Link>
+              <Link href="/adminLogin">
+                <button className="booking-button">Admin Login</button>
+              </Link>
+            </div>
+          </section>
+
+          <section>
+            <h5 className="">SOCIAL MEDIA</h5>
+            <div>
+              <div className="socials">
+                <Link
+                  to="https://www.facebook.com/kaliceagbabiaka1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaFacebookF className="" />
+                </Link>
+                <Link
+                  to="https://www.pinterest.com/oluwadahunsioluwakemi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaPinterestP className="" />
+                </Link>
+                <Link to="https://twitter.com/km_oluwadahunsi">
+                  <FaTwitter className="" />
+                </Link>
+
+                <Link
+                  to="https://gbengaoluwadahunsi.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaInstagram className="" />
+                </Link>
+              </div>
+
+              <button className="booking-button">Sign Up</button>
+            </div>
+          </section>
         </section>
       </footer>
     </>

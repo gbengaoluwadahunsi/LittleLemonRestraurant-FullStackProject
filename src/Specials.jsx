@@ -36,7 +36,7 @@ Specials.propTypes = {
   price: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   order: PropTypes.string.isRequired,
-  deliveryLogo: PropTypes.number.isRequired,
+  deliveryLogo: PropTypes.string.isRequired,
 };
 
 export default Specials;
