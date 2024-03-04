@@ -479,6 +479,10 @@ footer .socials a:hover {
 }
 
 @media (max-width: 768px) {
+
+  header{
+    padding-bottom: 2rem;
+  }
   .first-section {
     justify-content: space-between;
     padding: 1em 1em;
@@ -553,6 +557,8 @@ footer .socials a:hover {
 }
 
 @media (max-width: 480px) {
+
+
   .admin{
     font-size: 0.7rem;
   }
