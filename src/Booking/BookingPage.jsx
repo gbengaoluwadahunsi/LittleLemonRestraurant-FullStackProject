@@ -1,6 +1,6 @@
 
 import  BookingForm from  './BookingForm'
-import  './App.css'
+import  '../App.css'
 
 const BookingPage = () => {
 return (

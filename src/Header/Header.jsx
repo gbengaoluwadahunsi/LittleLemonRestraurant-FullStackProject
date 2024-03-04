@@ -1,8 +1,9 @@
 import { IoClose, IoMenu } from "react-icons/io5";
 import { NavLink, useNavigate } from "react-router-dom";
-import Image from "./Images/725cbe0ca5da8536fc99c51e00d4d13628bd9745.png";
+import Image from "../Images/725cbe0ca5da8536fc99c51e00d4d13628bd9745.png";
 import { useState } from "react";
-import "./App.css";
+import { FaCartShopping } from "react-icons/fa6";
+import "../App.css";
 
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
@@ -32,7 +33,13 @@ function Header() {
   return (
     <div>
       <header>
-        <NavLink to="/">
+        <div>
+          <IoMenu
+            className=" nav__toggle hamburger"
+            onClick={openMenuOnMobile}
+          />
+        </div>
+        <NavLink to="/" className="header-logo">
           <img src={Image} alt="Little Lemon restaurant Logo" />
         </NavLink>
 
@@ -109,13 +116,7 @@ function Header() {
             </NavLink>
           </ul>
         </nav>
-
-        <div>
-          <IoMenu
-            className=" nav__toggle hamburger"
-            onClick={openMenuOnMobile}
-          />
-        </div>
+        <FaCartShopping className="cart" />
       </header>
     </div>
   );

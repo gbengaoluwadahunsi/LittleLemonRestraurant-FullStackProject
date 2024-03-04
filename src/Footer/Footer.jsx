@@ -1,5 +1,5 @@
 // import React from "react";
-import Image from "./Images/725cbe0ca5da8536fc99c51e00d4d13628bd9745.png";
+import Image from "../Images/725cbe0ca5da8536fc99c51e00d4d13628bd9745.png";
 import {
   FaFacebookF,
   FaPinterestP,
@@ -77,7 +77,7 @@ function Footer() {
                 <li>Locations</li>
               </Link>
               <Link href="/adminLogin">
-                <button className="booking-button">Admin Login</button>
+                <button className="booking-button admin">Admin Login</button>
               </Link>
             </div>
           </section>
@@ -113,7 +113,7 @@ function Footer() {
                 </Link>
               </div>
 
-              <button className="booking-button">Sign Up</button>
+            <Link to = "/login">  <button className="booking-button admin">Sign Up</button></Link>
             </div>
           </section>
         </section>

@@ -1,9 +1,10 @@
-// import React from "react";
 import { Link } from "react-router-dom";
-import "./App.css";
 import CardArray from "./CardArray";
-import Image from "./Images/3d3cce7a3104bf255ed0e69195e2a157338c1bff.jpg";
+import Image from "/imagesInPublic/3d3cce7a3104bf255ed0e69195e2a157338c1bff.jpg";
 import Cards from "./Specials";
+import { motion } from "framer-motion";
+import "../App.css";
+import PopularCategories from "./PopularCategories";
 
 const Homepage = () => {
   const Cadd = CardArray.map((item) => (
@@ -36,13 +37,24 @@ const Homepage = () => {
           <img src={Image} alt="homepage Image" />
         </div>
       </section>
-      <section className="second-section">
-        <h1>This Week&apos;s Specials!</h1>
-        <Link to="/Menu" className="booking-button online-order">
-          Online Menu
-        </Link>
-      </section>
-      <div className="card-container">{Cadd}</div>
+      <div>
+        <section className="second-section">
+          <h1>This Week&apos;s Specials!</h1>
+          <Link to="/Menu" className="booking-button ">
+            Online Menu
+          </Link>
+        </section>
+        <motion.div
+          className="card-container"
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.8 }}
+        >
+          {Cadd}
+        </motion.div>
+      </div>
+
+      <PopularCategories />
     </>
   );
 };
